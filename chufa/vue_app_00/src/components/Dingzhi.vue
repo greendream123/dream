@@ -46,7 +46,9 @@
         <!-- 优秀订制师 -->
         <div class="goodTeacher">
             <div class="goodTeacher_left">
-                <img src="../assets/teacher01.jpg" alt="">
+                <router-link to="/teacher">
+                    <img src="../assets/teacher01.jpg" alt="">
+                </router-link>
             </div>
             <div class="goodTeacher_right">
                 <h3>翁国欣</h3>

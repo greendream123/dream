@@ -26,4 +26,22 @@ router.get("/dingzhiImg3",(req,res)=>{
         res.send(result);
     })
 })
+
+//翁国欣
+router.get("/wgxImg1",(req,res)=>{
+	var sql = 'SELECT pic FROM wgx_banner1';
+	pool.query(sql,(err,result)=>{
+        if(err) throw err;
+        res.send(result);
+    })
+})
+
+//翁国欣 banner2
+router.get("/wgxImg2",(req,res)=>{
+	var sql = 'SELECT pic,pname FROM wgx_banner2';
+	pool.query(sql,(err,result)=>{
+        if(err) throw err;
+        res.send(result);
+    })
+})
 module.exports = router;

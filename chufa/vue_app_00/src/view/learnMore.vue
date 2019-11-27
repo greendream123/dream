@@ -6,7 +6,9 @@
             </router-link>
         </mt-header>
         <div >
-            <button class="first_button">查看各个套餐的区别</button>
+            <router-link to="/guideCat">
+                <button class="first_button">查看各个套餐的区别</button>
+            </router-link>
         </div>
         <div>
             <button class="second_button">立即免费订制</button>
