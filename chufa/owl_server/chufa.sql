@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 2019-11-26 12:31:03
+-- Generation Time: 2019-11-27 12:47:35
 -- 服务器版本： 10.1.28-MariaDB
 -- PHP Version: 5.6.32
 
@@ -236,6 +236,56 @@ INSERT INTO `user` (`uid`, `uname`, `upwd`, `email`) VALUES
 (2, 'dingding', '123456', 'dingding@163.com'),
 (3, 'yaya', '123456', 'yaya@163.com');
 
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `wgx_banner1`
+--
+
+CREATE TABLE `wgx_banner1` (
+  `pid` int(11) NOT NULL,
+  `pic` varchar(64) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- 转存表中的数据 `wgx_banner1`
+--
+
+INSERT INTO `wgx_banner1` (`pid`, `pic`) VALUES
+(1, 'img/dingzhi_wgx/banner001.jpg'),
+(2, 'img/dingzhi_wgx/banner002.jpg'),
+(3, 'img/dingzhi_wgx/banner003.jpg'),
+(4, 'img/dingzhi_wgx/banner004.jpg'),
+(5, 'img/dingzhi_wgx/banner005.jpg'),
+(6, 'img/dingzhi_wgx/banner006.jpg'),
+(7, 'img/dingzhi_wgx/banner007.jpg'),
+(8, 'img/dingzhi_wgx/banner008.jpg'),
+(9, 'img/dingzhi_wgx/banner009.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `wgx_banner2`
+--
+
+CREATE TABLE `wgx_banner2` (
+  `pid` int(11) NOT NULL,
+  `pic` varchar(64) NOT NULL,
+  `pname` varchar(32) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- 转存表中的数据 `wgx_banner2`
+--
+
+INSERT INTO `wgx_banner2` (`pid`, `pic`, `pname`) VALUES
+(1, 'img/dingzhi_wgx/teacher01.jpg', '许佳佳'),
+(2, 'img/dingzhi_wgx/teacher02.jpg', '张旭'),
+(3, 'img/dingzhi_wgx/teacher03.jpg', '甘海秋'),
+(4, 'img/dingzhi_wgx/teacher04.jpg', '于岚'),
+(5, 'img/dingzhi_wgx/teacher05.jpg', '张宁'),
+(6, 'img/dingzhi_wgx/teacher06.jpg', '果小桃');
+
 --
 -- Indexes for dumped tables
 --
@@ -281,6 +331,18 @@ ALTER TABLE `index_image`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`uid`);
+
+--
+-- Indexes for table `wgx_banner1`
+--
+ALTER TABLE `wgx_banner1`
+  ADD PRIMARY KEY (`pid`);
+
+--
+-- Indexes for table `wgx_banner2`
+--
+ALTER TABLE `wgx_banner2`
+  ADD PRIMARY KEY (`pid`);
 
 --
 -- 在导出的表使用AUTO_INCREMENT
