@@ -13,11 +13,15 @@ import learnMore from './view/learnMore.vue'
 import barefeet from './view/barefeet.vue'
 import trip from './view/trip.vue'
 import teacher from './view/teacher.vue'
+import guideCat from './view/guideCat.vue'
+import costomMade from './view/costomMade.vue'
 
 Vue.use(Router)
 export default new Router({
   routes: [
     {path:'/',component:Footer},
+    {path:'/costomMade',component:costomMade},
+    {path:'/guideCat',component:guideCat},
     {path:'/teacher',component:teacher},
     {path:'/trip',component:trip},
     {path:'/barefeet',component:barefeet},

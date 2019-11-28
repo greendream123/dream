@@ -14,7 +14,9 @@
             </div>
             <span><router-link to="/learnMore" :style="{color:'#fff'}">详细了解></router-link></span>
             
-            <button>立即定制</button>
+            <router-link to="/costomMade">
+                <button>立即定制</button>
+            </router-link>
         </div>
         <div class="banner">
             <mt-swipe :auto="3000" :show-indicators="false">
@@ -190,7 +192,7 @@ export default {
     margin-left: 30px;
     margin-top: 30px;
 }
-.first>button{
+.first button{
     width: 327px;
     height: 57px;
     color: #39cea2;
