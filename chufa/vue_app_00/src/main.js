@@ -10,6 +10,7 @@ Vue.config.productionTip = false
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 Vue.use(VueAwesomeSwiper)
 import './assets/css/swiper.min.css'
+
 import Vant from 'vant';
 import 'vant/lib/index.css';
 Vue.use(Vant);

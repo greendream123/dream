@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 2019-11-27 12:47:35
+-- Generation Time: 2019-12-05 10:07:49
 -- 服务器版本： 10.1.28-MariaDB
 -- PHP Version: 5.6.32
 
@@ -21,16 +21,16 @@ SET time_zone = "+00:00";
 --
 -- Database: `chufa`
 --
-SET NAMES UTF8;
-DROP DATABASE IF EXISTS chufa;
-CREATE DATABASE chufa CHARSET=UTF8;
-USE chufa;
+CREATE DATABASE IF NOT EXISTS `chufa` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `chufa`;
+
 -- --------------------------------------------------------
 
 --
 -- 表的结构 `destination_c`
 --
 
+DROP TABLE IF EXISTS `destination_c`;
 CREATE TABLE `destination_c` (
   `Did` int(11) NOT NULL,
   `Dimg` varchar(128) DEFAULT NULL
@@ -57,6 +57,7 @@ INSERT INTO `destination_c` (`Did`, `Dimg`) VALUES
 -- 表的结构 `destination_f`
 --
 
+DROP TABLE IF EXISTS `destination_f`;
 CREATE TABLE `destination_f` (
   `Did` int(11) NOT NULL,
   `Dimg` varchar(128) DEFAULT NULL
@@ -83,6 +84,7 @@ INSERT INTO `destination_f` (`Did`, `Dimg`) VALUES
 -- 表的结构 `dingzhi_banner1`
 --
 
+DROP TABLE IF EXISTS `dingzhi_banner1`;
 CREATE TABLE `dingzhi_banner1` (
   `pid` int(11) NOT NULL,
   `pic` varchar(64) NOT NULL
@@ -125,6 +127,7 @@ INSERT INTO `dingzhi_banner1` (`pid`, `pic`) VALUES
 -- 表的结构 `dingzhi_banner2`
 --
 
+DROP TABLE IF EXISTS `dingzhi_banner2`;
 CREATE TABLE `dingzhi_banner2` (
   `pid` int(11) NOT NULL,
   `pic` varchar(64) NOT NULL
@@ -148,6 +151,7 @@ INSERT INTO `dingzhi_banner2` (`pid`, `pic`) VALUES
 -- 表的结构 `dingzhi_banner3`
 --
 
+DROP TABLE IF EXISTS `dingzhi_banner3`;
 CREATE TABLE `dingzhi_banner3` (
   `pid` int(11) NOT NULL,
   `pic` varchar(64) NOT NULL
@@ -174,6 +178,7 @@ INSERT INTO `dingzhi_banner3` (`pid`, `pic`) VALUES
 -- 表的结构 `index_image`
 --
 
+DROP TABLE IF EXISTS `index_image`;
 CREATE TABLE `index_image` (
   `Iid` int(11) NOT NULL,
   `Ititle` varchar(32) DEFAULT NULL,
@@ -220,6 +225,7 @@ INSERT INTO `index_image` (`Iid`, `Ititle`, `Isubtitle`, `Iimg`) VALUES
 -- 表的结构 `user`
 --
 
+DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user` (
   `uid` int(11) NOT NULL,
   `uname` varchar(32) DEFAULT NULL,
@@ -242,6 +248,7 @@ INSERT INTO `user` (`uid`, `uname`, `upwd`, `email`) VALUES
 -- 表的结构 `wgx_banner1`
 --
 
+DROP TABLE IF EXISTS `wgx_banner1`;
 CREATE TABLE `wgx_banner1` (
   `pid` int(11) NOT NULL,
   `pic` varchar(64) NOT NULL
@@ -268,6 +275,7 @@ INSERT INTO `wgx_banner1` (`pid`, `pic`) VALUES
 -- 表的结构 `wgx_banner2`
 --
 
+DROP TABLE IF EXISTS `wgx_banner2`;
 CREATE TABLE `wgx_banner2` (
   `pid` int(11) NOT NULL,
   `pic` varchar(64) NOT NULL,
