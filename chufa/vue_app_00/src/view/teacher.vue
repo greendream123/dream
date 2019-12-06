@@ -8,7 +8,7 @@
         <div class="banner1">
             <swiper :options="swiperOption">
                 <swiper-slide class="swiper1" v-for="(item,i) of list" :key="i" v-lazy="item"> 
-                <img class="img-css" :src="'http://127.0.0.1:3000/'+item.pic" >
+                <img class="img-css" :src="axios.defaults.baseURL+item.pic" >
                 </swiper-slide>
             </swiper>
         </div>
@@ -37,7 +37,7 @@
         <div class="banner3">
             <swiper :options="swiperOption">
                 <swiper-slide class="swiper1" v-for="(item,i) of list2" :key="i" v-lazy="item"> 
-                <img class="img-css" :src="'http://127.0.0.1:3000/'+item.pic" ><br>
+                <img class="img-css" :src="axios.defaults.baseURL+item.pic" ><br>
                 <h5>{{item.pname}}</h5>
                 <img src="../assets/img/dingzhi_wgx/star.jpg" alt=""><span class="rz">认证定制师</span>
                 </swiper-slide>

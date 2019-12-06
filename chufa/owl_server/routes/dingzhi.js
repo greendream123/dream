@@ -44,4 +44,13 @@ router.get("/wgxImg2",(req,res)=>{
         res.send(result);
     })
 })
+
+//定制旅行 推荐
+router.get("/costomMade",(req,res)=>{
+	var sql = 'SELECT * FROM costommade';
+	pool.query(sql,(err,result)=>{
+        if(err) throw err;
+        res.send(result);
+    })
+})
 module.exports = router;

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 2019-12-05 10:07:49
+-- Generation Time: 2019-12-06 10:30:06
 -- 服务器版本： 10.1.28-MariaDB
 -- PHP Version: 5.6.32
 
@@ -23,6 +23,35 @@ SET time_zone = "+00:00";
 --
 CREATE DATABASE IF NOT EXISTS `chufa` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 USE `chufa`;
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `costommade`
+--
+
+DROP TABLE IF EXISTS `costommade`;
+CREATE TABLE `costommade` (
+  `pid` int(11) NOT NULL,
+  `rm` varchar(64) NOT NULL,
+  `my` varchar(64) NOT NULL,
+  `ms` varchar(64) NOT NULL,
+  `yq` varchar(64) NOT NULL,
+  `jx` varchar(64) NOT NULL,
+  `qz` varchar(64) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- 转存表中的数据 `costommade`
+--
+
+INSERT INTO `costommade` (`pid`, `rm`, `my`, `ms`, `yq`, `jx`, `qz`) VALUES
+(1, 'img/costomMade/dingzhi_hostImg/rm1.jpg', 'img/costomMade/dingzhi_hostImg/my1.jpg', 'img/costomMade/dingzhi_hostImg/ms1.jpg', 'img/costomMade/dingzhi_hostImg/yq1.jpg', 'img/costomMade/dingzhi_hostImg/jx1.jpg', 'img/costomMade/dingzhi_hostImg/qz1.jpg'),
+(2, 'img/costomMade/dingzhi_hostImg/rm2.jpg', 'img/costomMade/dingzhi_hostImg/my2.jpg', 'img/costomMade/dingzhi_hostImg/ms2.jpg', 'img/costomMade/dingzhi_hostImg/yq2.jpg', 'img/costomMade/dingzhi_hostImg/jx2.jpg', 'img/costomMade/dingzhi_hostImg/qz2.jpg'),
+(3, 'img/costomMade/dingzhi_hostImg/rm3.jpg', 'img/costomMade/dingzhi_hostImg/my3.jpg', 'img/costomMade/dingzhi_hostImg/ms3.jpg', 'img/costomMade/dingzhi_hostImg/yq3.jpg', 'img/costomMade/dingzhi_hostImg/jx3.jpg', 'img/costomMade/dingzhi_hostImg/qz3.jpg'),
+(4, 'img/costomMade/dingzhi_hostImg/rm4.jpg', 'img/costomMade/dingzhi_hostImg/my4.jpg', 'img/costomMade/dingzhi_hostImg/ms4.jpg', 'img/costomMade/dingzhi_hostImg/yq4.jpg', 'img/costomMade/dingzhi_hostImg/jx4.jpg', 'img/costomMade/dingzhi_hostImg/qz4.jpg'),
+(5, 'img/costomMade/dingzhi_hostImg/rm5.jpg', 'img/costomMade/dingzhi_hostImg/my5.jpg', 'img/costomMade/dingzhi_hostImg/ms5.jpg', 'img/costomMade/dingzhi_hostImg/yq5.jpg', 'img/costomMade/dingzhi_hostImg/jx5.jpg', 'img/costomMade/dingzhi_hostImg/qz5.jpg'),
+(6, 'img/costomMade/dingzhi_hostImg/rm6.jpg', 'img/costomMade/dingzhi_hostImg/my6.jpg', 'img/costomMade/dingzhi_hostImg/ms6.jpg', 'img/costomMade/dingzhi_hostImg/yq1.jpg', 'img/costomMade/dingzhi_hostImg/jx6.jpg', 'img/costomMade/dingzhi_hostImg/qz6.jpg');
 
 -- --------------------------------------------------------
 
@@ -297,6 +326,12 @@ INSERT INTO `wgx_banner2` (`pid`, `pic`, `pname`) VALUES
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `costommade`
+--
+ALTER TABLE `costommade`
+  ADD PRIMARY KEY (`pid`);
 
 --
 -- Indexes for table `destination_c`

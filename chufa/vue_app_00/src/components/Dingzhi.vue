@@ -35,7 +35,7 @@
             <mt-swipe :auto="3000" :show-indicators="false">
                 <mt-swipe-item v-for="(item,i) of list" :key="i" v-lazy="item">
                     <router-link to="/barefeet">
-                        <img :src="'http://127.0.0.1:3000/'+item.pic" alt="1">
+                        <img :src="axios.defaults.baseURL+item.pic" alt="1">
                     </router-link>
                 </mt-swipe-item>
             </mt-swipe>
@@ -65,7 +65,7 @@
                 <swiper :options="swiperOption">
                     <swiper-slide class="swiper1" v-for="(item,i) of list2" :key="i" v-lazy="item">
                         <router-link to="/teacher">
-                            <img class="img-css" :src="'http://127.0.0.1:3000/'+item.pic" >
+                            <img class="img-css" :src="axios.defaults.baseURL+item.pic" >
                             <img src="../assets/teji.jpg" alt="">
                         </router-link>
                     </swiper-slide>
@@ -81,7 +81,7 @@
             <div class="mask2">
                 <swiper :options="swiperOption">
                     <swiper-slide v-for="(item,i) of list3" :key="i" v-lazy="item">
-                        <router-link to="/trip"><img class="img-css" :src="'http://127.0.0.1:3000/'+item.pic"></router-link>
+                        <router-link to="/trip"><img class="img-css" :src="axios.defaults.baseURL+item.pic"></router-link>
                     </swiper-slide>
                 </swiper>
             </div>
