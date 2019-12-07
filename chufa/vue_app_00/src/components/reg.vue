@@ -255,39 +255,40 @@ export default {
 	},
 	methods: {
 		vali(){
-			//创建正则表达式 3~12
-            var reg=/^[a-z0-9]{3,12}$/i;
-            var ereg=/^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/i;
+            //创建正则表达式 3~12
+            let reg=/^[a-z0-9]{3,12}$/i;
+            let ereg=/^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/i;
             //获取用户输入 邮箱/用户名/密码
-            var e=this.email;
-			var u=this.uname;
-			var p=this.upwd;
-			console.log(u+"_"+p+"_"+e);
-			//验证用户名如果不匹配 提示框
-			if(!reg.test(u)){
-				this.$messagebox("消息","用户名格式不正确");
-				return;
-			}
-			//验证密码如果不匹配 提示框
-			if(!reg.test(p)){
-				this.$messagebox("消息","密码格式不正确");
-				return;
-            }
+            let e=this.email;
+            let u=this.uname;
+            let p=this.upwd;
+            console.log(u+"_"+p+"_"+e);
             //验证邮箱如果不匹配 提示框
             if(!ereg.test(e)){
                 this.$messagebox("消息","邮箱格式不正确");
                 return;
             }
-			//发送ajax请求完成注册
-			var obj={uname:u,upwd:p,email:e};
+            //验证用户名如果不匹配 提示框
+            if(!reg.test(u)){
+                this.$messagebox("消息","用户名格式不正确");
+                return;
+            }
+            //验证密码如果不匹配 提示框
+            if(!reg.test(p)){
+                this.$messagebox("消息","密码格式不正确");
+                return;
+            }
+            
+            //发送ajax请求完成注册
+            var obj={uname:u,upwd:p,email:e};
             var url="/reg";
             this.axios.post("/reg",Qs.stringify({uname:u,upwd:p,email:e}))
             .then(res=>{
-            if(res.data.code==1){
-                this.$router.push("/login");
-            }else{
-                this.$toast(`登录失败: ${res.data.msg}`);
-            }
+                if(res.data.code==1){
+                    this.$router.push("/login");
+                }else{
+                    this.$toast(`登录失败: ${res.data.msg}`);
+                }
             })
 		}
 	},

@@ -36,7 +36,7 @@
         <span class="gn">国内</span>
         <span class="more">更多目的地></span>
      </div>
-     <div id="f2" class="gnimgs" v-for="(item,n) of list2" >
+     <div id="f2" class="gnimgs" v-for="(item,i) of list2" :key="i">
        <img :src="'http://127.0.0.1:3000/'+item.Dimg">
      </div>
   </div>  

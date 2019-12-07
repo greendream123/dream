@@ -14,46 +14,51 @@
                 
                 <div class="first">
                     <h5>当季热门 /6</h5>
-                    <van-grid :border="false" :column-num="2" :gutter="8">
+                    <van-grid :border="false" :column-num="2" :gutter="8" >
                         <van-grid-item v-for="(item,i) of list" :key="i" v-lazy="item" @click="display">
-                            <div class="mask" v-show="show" ></div>
+                            <div class="mask"  :style="{display:hide}"></div>
                                 <a href="javascript:;"><img  :src="axios.defaults.baseURL+item.rm"></a>
                         </van-grid-item>
                     </van-grid>
                     <h5>蜜月度假 /6</h5>
                     <van-grid :border="false" :column-num="2" :gutter="8">
-                        <van-grid-item v-for="(item,i) of list" :key="i" v-lazy="item">
+                        <van-grid-item v-for="(item,i) of list" :key="i" v-lazy="item" @click="display">
+                            <div class="mask"  :style="{display:hide}"></div>
                             <img :src="axios.defaults.baseURL+item.my">
                         </van-grid-item>
                     </van-grid>
                     <h5>美食购物 /6</h5>
                     <van-grid :border="false" :column-num="2" :gutter="8">
-                        <van-grid-item v-for="(item,i) of list" :key="i" v-lazy="item">
+                        <van-grid-item v-for="(item,i) of list" :key="i" v-lazy="item" @click="display">
+                            <div class="mask"  :style="{display:hide}"></div>
                             <img :src="axios.defaults.baseURL+item.ms">
                         </van-grid-item>
                     </van-grid>
                     <h5>野趣极限 /5</h5>
                     <van-grid :border="false" :column-num="2" :gutter="8">
-                        <van-grid-item v-for="(item,i) of list" :key="i" v-lazy="item">
+                        <van-grid-item v-for="(item,i) of list" :key="i" v-lazy="item" @click="display">
+                            <div class="mask"  :style="{display:hide}"></div>
                             <img :src="axios.defaults.baseURL+item.yq">
                         </van-grid-item>
                     </van-grid>
                     <h5>静心修禅 /6</h5>
                     <van-grid :border="false" :column-num="2" :gutter="8">
-                        <van-grid-item v-for="(item,i) of list" :key="i" v-lazy="item">
+                        <van-grid-item v-for="(item,i) of list" :key="i" v-lazy="item" @click="display">
+                            <div class="mask"  :style="{display:hide}"></div>
                             <img :src="axios.defaults.baseURL+item.jx">
                         </van-grid-item>
                     </van-grid>
                     <h5>亲子旅行 /6</h5>
                     <van-grid :border="false" :column-num="2" :gutter="8">
-                        <van-grid-item v-for="(item,i) of list" :key="i" v-lazy="item">
+                        <van-grid-item v-for="(item,i) of list" :key="i" v-lazy="item" @click="display">
+                            <div class="mask"  :style="{display:hide}"></div>
                             <img :src="axios.defaults.baseURL+item.qz">
                         </van-grid-item>
                     </van-grid>
                 </div>
             </van-tab>
             <van-tab title="亚洲">
-            
+           
             </van-tab>
             <van-tab title="欧洲">
             
@@ -82,7 +87,8 @@ export default {
         return {
             list:[],
             show:false,
-            num:0
+            num:0,
+            hide:'none'
         }
     },
     methods:{
@@ -95,14 +101,17 @@ export default {
             console.log(err)
             });
         },
-        display(){
+        display(e){
             this.show=!this.show
             if(this.show===true){
+                this.hide='block'
                 this.num+=1;
             }else{
+                this.hide='none'
                 this.num-=1
             }
             console.log(this.num)
+            console.log(e.target)
         }
     },
     created(){

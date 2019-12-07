@@ -49,8 +49,7 @@
   }
   .contain{
 				height:100%;
-				background-color: #5FD3AC;
-				background-color:rgba(51,204,153,0.9);
+				background-color:#3dcfcf;
 			}
 			.boxbg1{
         margin-top: 200px;
